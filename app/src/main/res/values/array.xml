@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ages">
+        <item>Under 18</item>
+        <item>18-23</item>
+        <item>24-29</item>
+        <item>30 and Above</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Dont Wish to Disclose</item>
+    </string-array>
+
+    <string-array name="fitness_goals">
+        <item>Weight Loss</item>
+        <item>Endurance</item>
+        <item>Strength</item>
+        <item>Muscle Gain</item>
+    </string-array>
+
+    <string-array name="frequency_gym">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="gymprogram_interest">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
+    <string-array name="gym_timing">
+        <item>Early Morning</item>
+        <item>Afternoon</item>
+        <item>Late Afternoon</item>
+        <item>Early Evening</item>
+        <item>Evening</item>
+    </string-array>
+
+    <string-array name="same_gender">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="PT_interest">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="gym_session">
+        <item>30-45 mins</item>
+        <item>45mins - 1hour</item>
+        <item>1 Hour - 2 Hours</item>
+        <item>2 Hours+</item>
+    </string-array>
+
+    <string-array name="equipment_familiar">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="had_partner">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="rates">
+        <item>1 - worst experience</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5 - best experience</item>
+    </string-array>
+
+    <string-array name="update_frequency">
+        <item name="1">Daily</item>
+        <item name="7">Weekly</item>
+        <item name="12">Monthly</item>
+        <item name="0">Never</item>
+    </string-array>
+
+    <string-array name="update_frequency_values">
+        <item name="1">1</item>
+        <item name="7">7</item>
+        <item name="12">12</item>
+        <item name="0">0</item>
+    </string-array>
+
+    <string-array name="ListLanguages">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>French</item>
+    </string-array>
+
+    <string-array name="ListLanguagesValues">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>French</item>
+    </string-array>
+</resources>

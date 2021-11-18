@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="User Settings">
+
+        <EditTextPreference android:title="Username"
+            android:summary="Set/Edit your username"
+            android:key="prefUsername"/>
+
+        <EditTextPreference android:title="Password"
+            android:summary="Set/Edit your password"
+            android:key="prefPassword"
+            android:inputType="textPassword"/>
+
+        <ListPreference android:title="Languages"
+            android:summary="Choose a Language"
+            android:key="prefLanguage"
+            android:entries="@array/ListLanguages"
+            android:entryValues="@array/ListLanguagesValues"
+            />
+        <SwitchPreference
+            android:key="prefTheme"
+            android:title="Light or Dark Mode"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Security Settings">
+
+        <CheckBoxPreference android:title="Lock Screen"
+            android:summary="Lock the screen"
+            android:key="prefLockScreen"
+            android:defaultValue="false"/>
+
+        <ListPreference android:title="Reminder for updates"
+            android:summary="Set Update Reminder Frequency"
+            android:key="prefUpdateReminder"
+            android:entries="@array/update_frequency"
+            android:entryValues="@array/update_frequency_values"
+            />
+        <CheckBoxPreference android:title="Stay Logged In"
+            android:summary="ON/OFF"
+            android:key="prefStayLoggedIn"
+            android:defaultValue="true"/>
+
+        <SwitchPreference
+            android:key="prefSync"
+            android:title="Enable periodic syncing"/>
+
+        <Preference
+            android:key="version"
+            android:title="Build Version"
+            android:summary="1.0.0"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

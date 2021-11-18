@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionnaireActivity"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/idTVQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Age"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/spinnerAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion1"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/idTVQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:layout_below="@+id/spinnerAge"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/idTVQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fitness Goals"
+                android:layout_below="@+id/spinnerGender"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerFitnessGoals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion3"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/idTVQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How often do you workout? (In Days)"
+                android:layout_below="@+id/spinnerFitnessGoals"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerGymFreq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion4"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/idTVQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Are you interested in workout programs/classes?"
+                android:layout_below="@+id/spinnerGymFreq"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerGymProgramInterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion5"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/idTVQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What time do you like working out?"
+                android:layout_below="@+id/spinnerGymProgramInterest"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerGymTiming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion6"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/idTVQuestion7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do you prefer working out with the same gender?"
+                android:layout_below="@+id/spinnerGymTiming"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerSameGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion7"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/idTVQuestion8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Are you interested in working out with a Trainer?"
+                android:layout_below="@+id/spinnerSameGender"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerInterestPT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion8"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:id="@+id/idTVQuestion9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="On average, how long are you gym sessions?"
+                android:layout_below="@+id/spinnerInterestPT"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerGymSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion9"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:id="@+id/idTVQuestion10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Are you familiar with using gym equipment?"
+                android:layout_below="@+id/spinnerGymSession"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerEquipmentFamiliar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion10"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:id="@+id/idTVQuestion11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Have you previously had a workout partner?"
+                android:layout_below="@+id/spinnerEquipmentFamiliar"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerHadWorkoutPartner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion11"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:id="@+id/idTVQuestion12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate your experience on working out with a gym partner."
+                android:layout_below="@+id/spinnerHadWorkoutPartner"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTVQuestion12"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp" />
+
+            <Button
+                android:id="@+id/submitQuestionnaire"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/spinnerRate"
+                android:layout_marginBottom="5dp"
+                android:text="Submit"
+                android:textColor="#FFFFFF" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
