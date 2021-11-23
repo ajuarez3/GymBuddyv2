@@ -1,10 +1,12 @@
 package com.example.gymbudd;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -38,6 +40,8 @@ public class QuestionnaireActivity extends AppCompatActivity {
     private Spinner spinnerEquipmentFamiliar;
     private Spinner spinnerHadWorkoutPartner;
     private Spinner spinnerRate;
+    private EditText usernameinput;
+
 
 
     @Override
@@ -59,6 +63,7 @@ public class QuestionnaireActivity extends AppCompatActivity {
         spinnerEquipmentFamiliar = findViewById(R.id.spinnerEquipmentFamiliar);
         spinnerHadWorkoutPartner = findViewById(R.id.spinnerHadWorkoutPartner);
         spinnerRate = findViewById(R.id.spinnerRate);
+        usernameinput = (EditText) findViewById(R.id.usernameinput);
         button_Submit = (Button) findViewById(R.id.submitQuestionnaire) ;
 
         String[] userAges = getResources().getStringArray(R.array.ages);
@@ -121,6 +126,8 @@ public class QuestionnaireActivity extends AppCompatActivity {
         adapter12.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerRate.setAdapter(adapter12);
 
+
+
         button_Submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,9 +143,11 @@ public class QuestionnaireActivity extends AppCompatActivity {
                 String equipmentFamiliar = spinnerEquipmentFamiliar.getSelectedItem().toString();
                 String hardWorkoutPartner = spinnerHadWorkoutPartner.getSelectedItem().toString();
                 String rate = spinnerRate.getSelectedItem().toString();
+                String userName = usernameinput.getText().toString();
                 String identifier = getIntent().getExtras().get("CLASS").toString();
 
-                User user = new User(age, gender, fitnessGoal, gymFreq, gymProgramInterest, gymTiming, sameGender, interestPT, gymSession, equipmentFamiliar, hardWorkoutPartner, rate, identifier);
+
+                User user = new User(age, gender, fitnessGoal, gymFreq, gymProgramInterest, gymTiming, sameGender, interestPT, gymSession, equipmentFamiliar, hardWorkoutPartner, rate, userName, identifier);
                 Map<String, User> userMap = new HashMap<>();
 
 
@@ -155,6 +164,8 @@ public class QuestionnaireActivity extends AppCompatActivity {
                         Log.d("Test", e.toString());
                     }
                 });
+                Intent nextT = new Intent(QuestionnaireActivity.this, Workouts.class);
+                startActivity(nextT);
             }
         });
 

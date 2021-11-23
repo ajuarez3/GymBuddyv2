@@ -6,34 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MessageInboxActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.GymBudd.AppBarOverlay">
+        android:background="@color/gradStart"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/black">
 
-        <TextView
-            android:id="@+id/title"
+        <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:minHeight="?actionBarSize"
-            android:padding="16dp"
-            android:text="@string/title_activity_message_inbox"
-            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-            />
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
+            android:text="Friends" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="Tabs"/>
-    </com.google.android.material.appbar.AppBarLayout>
+            android:text="Groups"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trainers"/>
+    </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager.widget.ViewPager
+
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:contentDescription="View"/>
+        />
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="48dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

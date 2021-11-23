@@ -1,9 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context=".Workouts">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:onClick="Imagebuttonclicked"
+                    android:id="@+id/russiantwists"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dp"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="How to do Russian Twists"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.0dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Don't hurt your back..."
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/russian"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#7E7D7D" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:onClick="Imagebuttonclicked"
+                    android:id="@+id/pushup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dp"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="How to do push ups"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.0dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Perfect the pushup"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pushups"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#7E7D7D" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:onClick="Imagebuttonclicked"
+                    android:id="@+id/squats"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dp"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="How to do squats"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.0dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="work the glutes"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/squats"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#7E7D7D" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:onClick="Imagebuttonclicked"
+                    android:id="@+id/jumping"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dp"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="How to do Jumping jacks"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.0dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Full body"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/jumping"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#7E7D7D" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:onClick="Imagebuttonclicked"
+                    android:id="@+id/bicycle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dp"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="How to do bicycle crunches"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.0dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Engage your core"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/bike"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#7E7D7D" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
+
+                <LinearLayout
+                    android:onClick="Imagebuttonclicked"
+                    android:id="@+id/planks"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dp"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="How to do a plank"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.0dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Build Endurance"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/plank"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#7E7D7D" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

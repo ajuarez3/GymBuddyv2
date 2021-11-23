@@ -74,6 +74,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String passwordrepeat = editTextrepeatPassword.getText().toString().trim();
 
 
+
                 if (!password.equals(passwordrepeat)){
                     Toast.makeText(SignUpActivity.this, "Password don't match", Toast.LENGTH_SHORT).show();
                 } else if (firstName.equals("") || lastName.equals("") || email.equals("")

@@ -10,25 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymBudd">
         <activity
+            android:name=".Workouts"
+            android:exported="false"
+            android:label="Workouts"/>
+        <activity
+            android:name=".MessageActivity"
+            android:exported="false" />
+        <activity
             android:name=".MessageInboxActivity"
             android:exported="false"
-            android:label="@string/title_activity_message_inbox"
-            android:theme="@style/Theme.GymBudd.NoActionBar" />
-        <activity
-            android:name=".SecondUserMessageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".UserMessageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MessageActivity3"
-            android:exported="false" />
+            android:label="Message Inbox" />
         <activity
             android:name=".QuestionnaireActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Questionaire"/>
         <activity
             android:name=".ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Profile"/>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -47,7 +46,7 @@
         <activity
             android:name=".SignUpActivity"
             android:exported="true"
-            android:label="@string/title_activity_sign_up"
+            android:label="Sign Up"
             android:theme="@style/Theme.GymBudd.NoActionBar" />
         <activity
             android:name=".MainActivity"

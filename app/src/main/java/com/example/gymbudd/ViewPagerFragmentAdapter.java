@@ -10,10 +10,10 @@ import com.example.gymbudd.Frag1;
 import com.example.gymbudd.Frag2;
 import com.example.gymbudd.Frag3;
 
-public class ViewPagerAdapter extends FragmentStateAdapter {
+public class ViewPagerFragmentAdapter extends FragmentStateAdapter {
 
     private String[] titles= new String[]{"Friends","Groups", "Trainers"};
-    public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
+    public ViewPagerFragmentAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
 

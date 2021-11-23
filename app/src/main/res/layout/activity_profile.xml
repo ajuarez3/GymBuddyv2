@@ -194,6 +194,15 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:srcCompat="@drawable/ic_baseline_phone_24" />
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationBar"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_navigation"
+            android:background="?android:attr/windowBackground"
+            />
     </RelativeLayout>
 
 </RelativeLayout>

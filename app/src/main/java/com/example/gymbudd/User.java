@@ -3,9 +3,9 @@ package com.example.gymbudd;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    String age, gender, fitnessGoal, gymFreq, gymProgramInterest, gymTiming, sameGender, interestPT, gymSession, equipmentFamiliar, hardWorkoutPartner, rate, identifier;
+    String age, gender, fitnessGoal, gymFreq, gymProgramInterest, gymTiming, sameGender, interestPT, gymSession, equipmentFamiliar, hardWorkoutPartner, rate, usernameinput,identifier;
 
-    public User(String age, String gender, String fitnessGoal, String gymFreq, String gymProgramInterest, String gymTiming, String sameGender, String interestPT, String gymSession, String equipmentFamiliar, String hardWorkoutPartner, String rate, String identifier) {
+    public User(String age, String gender, String fitnessGoal, String gymFreq, String gymProgramInterest, String gymTiming, String sameGender, String interestPT, String gymSession, String equipmentFamiliar, String hardWorkoutPartner, String rate,String usernameinput,String identifier) {
         this.age = age;
         this.gender = gender;
         this.fitnessGoal = fitnessGoal;
@@ -18,8 +18,11 @@ public class User implements Serializable {
         this.equipmentFamiliar = equipmentFamiliar;
         this.hardWorkoutPartner = hardWorkoutPartner;
         this.rate = rate;
+        this.usernameinput = usernameinput;
         this.identifier = identifier;
     }
+
+
 
     @Override
     public String toString() {
@@ -36,6 +39,7 @@ public class User implements Serializable {
                 ", equipmentFamiliar='" + equipmentFamiliar + '\'' +
                 ", hardWorkoutPartner='" + hardWorkoutPartner + '\'' +
                 ", rate='" + rate + '\'' +
+                "Username='" +usernameinput+'\''+
                 ", identifier='" + identifier + '\'' +
                 '}';
     }
@@ -138,6 +142,10 @@ public class User implements Serializable {
 
     public String getRate() {
         return rate;
+    }
+
+    public String getUsernameinput() {
+        return usernameinput;
     }
 
     public void setRate(String rate) {
