@@ -38,6 +38,7 @@ public class Frag1 extends Fragment {
 
         return view;
     }
+
     private void readUsers(){
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
     }

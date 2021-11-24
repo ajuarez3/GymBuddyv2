@@ -145,9 +145,11 @@ public class QuestionnaireActivity extends AppCompatActivity {
                 String rate = spinnerRate.getSelectedItem().toString();
                 String userName = usernameinput.getText().toString();
                 String identifier = getIntent().getExtras().get("CLASS").toString();
+                String email = getIntent().getExtras().get("EMAIL").toString();
+                String name = getIntent().getExtras().get("NAME").toString();
 
-
-                User user = new User(age, gender, fitnessGoal, gymFreq, gymProgramInterest, gymTiming, sameGender, interestPT, gymSession, equipmentFamiliar, hardWorkoutPartner, rate, userName, identifier);
+                User user = new User(email, name, age, gender, fitnessGoal, gymFreq, gymProgramInterest, gymTiming, sameGender, interestPT, gymSession,
+                        equipmentFamiliar, hardWorkoutPartner, rate, identifier, userName);
                 Map<String, User> userMap = new HashMap<>();
 
 
