@@ -95,6 +95,8 @@ public class SignUpActivity extends AppCompatActivity {
                                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                                         Intent intent = new Intent(SignUpActivity.this, QuestionnaireActivity.class);
                                         intent.putExtra("CLASS", "Student");
+                                        intent.putExtra("EMAIL", email);
+                                        intent.putExtra("NAME", firstName + " " + lastName);
                                         startActivity(intent);
                                         finish();
                                     }

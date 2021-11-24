@@ -3,9 +3,11 @@ package com.example.gymbudd;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    String age, gender, fitnessGoal, gymFreq, gymProgramInterest, gymTiming, sameGender, interestPT, gymSession, equipmentFamiliar, hardWorkoutPartner, rate, usernameinput,identifier;
+    String email, name, age, gender, fitnessGoal, gymFreq, gymProgramInterest, gymTiming, sameGender, interestPT, gymSession, equipmentFamiliar, hardWorkoutPartner, rate, identifier, username;
 
-    public User(String age, String gender, String fitnessGoal, String gymFreq, String gymProgramInterest, String gymTiming, String sameGender, String interestPT, String gymSession, String equipmentFamiliar, String hardWorkoutPartner, String rate,String usernameinput,String identifier) {
+    public User(String email, String name, String age, String gender, String fitnessGoal, String gymFreq, String gymProgramInterest, String gymTiming, String sameGender, String interestPT, String gymSession, String equipmentFamiliar, String hardWorkoutPartner, String rate, String identifier, String username) {
+        this.email = email;
+        this.name = name;
         this.age = age;
         this.gender = gender;
         this.fitnessGoal = fitnessGoal;
@@ -18,16 +20,16 @@ public class User implements Serializable {
         this.equipmentFamiliar = equipmentFamiliar;
         this.hardWorkoutPartner = hardWorkoutPartner;
         this.rate = rate;
-        this.usernameinput = usernameinput;
         this.identifier = identifier;
+        this.username = username;
     }
-
-
 
     @Override
     public String toString() {
         return "User{" +
-                "age='" + age + '\'' +
+                "email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", age='" + age + '\'' +
                 ", gender='" + gender + '\'' +
                 ", fitnessGoal='" + fitnessGoal + '\'' +
                 ", gymFreq='" + gymFreq + '\'' +
@@ -39,9 +41,25 @@ public class User implements Serializable {
                 ", equipmentFamiliar='" + equipmentFamiliar + '\'' +
                 ", hardWorkoutPartner='" + hardWorkoutPartner + '\'' +
                 ", rate='" + rate + '\'' +
-                "Username='" +usernameinput+'\''+
                 ", identifier='" + identifier + '\'' +
+                ", username='" + username + '\'' +
                 '}';
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getIdentifier() {
@@ -144,11 +162,15 @@ public class User implements Serializable {
         return rate;
     }
 
-    public String getUsernameinput() {
-        return usernameinput;
-    }
-
     public void setRate(String rate) {
         this.rate = rate;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

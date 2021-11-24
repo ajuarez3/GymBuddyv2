@@ -26,9 +26,9 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mAuth.signOut();
+        //mAuth.signOut();
         if (mAuth.getCurrentUser() != null) {
-            Intent intent = new Intent(LoginActivity.this, QuestionnaireActivity.class);
+            Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
             startActivity(intent);
         }
     }
@@ -77,8 +77,9 @@ public class LoginActivity extends AppCompatActivity {
                 }else {
                     Toast.makeText(LoginActivity.this, "Enter email and password", Toast.LENGTH_SHORT).show();
                 }
-                Intent intent = new Intent(LoginActivity.this, Workouts.class);
-                startActivity(intent);
+//                mAuth = FirebaseAuth.getInstance();
+//                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+//                startActivity(intent);
             }
 
         });
@@ -95,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (task.isSuccessful()){
                     Log.d("demo", "I am successful");
                     Toast.makeText(LoginActivity.this, "Logged in", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, GymBuddyActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                     startActivity(intent);
                     editText_email.setText("");
                     editText_password.setText("");
