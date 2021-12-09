@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ngljr/AProjects/gymbuddy4/app/src/main/res/drawable/btn_decline.xml" value="0.13148148148148148" />
+        <entry key="..\:/Users/ngljr/AProjects/gymbuddy4/app/src/main/res/drawable/btn_perform.xml" value="0.13148148148148148" />
+        <entry key="..\:/Users/ngljr/AProjects/gymbuddy4/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/ngljr/AProjects/gymbuddy4/app/src/main/res/layout/activity_profile.xml" value="0.17889492753623187" />
+        <entry key="..\:/Users/ngljr/AProjects/gymbuddy4/app/src/main/res/layout/activity_view_friend.xml" value="0.22" />
+        <entry key="..\:/Users/ngljr/AProjects/gymbuddy4/app/src/main/res/layout/activity_workouts.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

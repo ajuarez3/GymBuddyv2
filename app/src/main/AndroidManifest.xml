@@ -13,9 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymBudd">
         <activity
+            android:name=".ViewFriendActivity"
+            android:exported="false" />
+        <activity
             android:name=".Workouts"
             android:exported="false"
-            android:label="Workouts"/>
+            android:label="Workouts" />
         <activity
             android:name=".MessageActivity"
             android:exported="false" />
@@ -26,11 +29,11 @@
         <activity
             android:name=".QuestionnaireActivity"
             android:exported="true"
-            android:label="Questionaire"/>
+            android:label="Questionaire" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false"
-            android:label="Profile"/>
+            android:label="Profile" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">

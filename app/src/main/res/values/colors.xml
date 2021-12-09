@@ -24,5 +24,6 @@
     <color name="greentwo">#48F44F</color>
     <color name="followingBg">#49BEFF</color>
     <color name="grey">#E5E5E5</color>
+    <color name="colorRed">#F44336</color>
 
 </resources>

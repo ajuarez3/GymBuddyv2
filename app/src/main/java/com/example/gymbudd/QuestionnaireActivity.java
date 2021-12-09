@@ -166,7 +166,7 @@ public class QuestionnaireActivity extends AppCompatActivity {
                         Log.d("Test", e.toString());
                     }
                 });
-                Intent nextT = new Intent(QuestionnaireActivity.this, Workouts.class);
+                Intent nextT = new Intent(QuestionnaireActivity.this, ProfileActivity.class);
                 startActivity(nextT);
             }
         });

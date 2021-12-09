@@ -130,4 +130,8 @@
     <string name="action_settings">Settings</string>
     <string name="username">Username</string>
     <string name="hint_username">Usernameinput</string>
+    <string name="title_activity_view_friends">view_friends_activity</string>
+    <string name="buttonDecline">Decline</string>
+    <string name="button_send">Send Request</string>
+    <string name="buttonDeclineRequest">Decline Request</string>
 </resources>
