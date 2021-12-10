@@ -5,6 +5,9 @@ import java.io.Serializable;
 public class User implements Serializable {
     String email, name, age, gender, fitnessGoal, gymFreq, gymProgramInterest, gymTiming, sameGender, interestPT, gymSession, equipmentFamiliar, hardWorkoutPartner, rate, identifier, username;
 
+    public User() {
+    }
+
     public User(String email, String name, String age, String gender, String fitnessGoal, String gymFreq, String gymProgramInterest, String gymTiming, String sameGender, String interestPT, String gymSession, String equipmentFamiliar, String hardWorkoutPartner, String rate, String identifier, String username) {
         this.email = email;
         this.name = name;

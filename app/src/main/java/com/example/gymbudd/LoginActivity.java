@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mAuth.signOut();
+        //mAuth.signOut();
         if (mAuth.getCurrentUser() != null) {
             Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
             startActivity(intent);
@@ -77,14 +77,6 @@ public class LoginActivity extends AppCompatActivity {
                 }else {
                     Toast.makeText(LoginActivity.this, "Enter email and password", Toast.LENGTH_SHORT).show();
                 }
-
-                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
-                startActivity(intent);
-
-//                mAuth = FirebaseAuth.getInstance();
-//                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
-//                startActivity(intent);
-
             }
 
         });
@@ -112,4 +104,5 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
 }

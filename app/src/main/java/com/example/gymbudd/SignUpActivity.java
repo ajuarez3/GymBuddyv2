@@ -98,6 +98,18 @@ public class SignUpActivity extends AppCompatActivity {
                                         intent.putExtra("EMAIL", email);
                                         intent.putExtra("NAME", firstName + " " + lastName);
                                         startActivity(intent);
+                                        mAuth.getCurrentUser().sendEmailVerification()
+                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                        if (task.isSuccessful()) {
+                                                            Log.d("TAG", "Email sent.");
+                                                        } else {
+                                                            Toast.makeText(SignUpActivity.this, "Email not sent", Toast.LENGTH_SHORT).show();
+                                                            Log.d("Tag", task.getException().toString());
+                                                        }
+                                                    }
+                                                });
                                         finish();
                                     }
                                 }

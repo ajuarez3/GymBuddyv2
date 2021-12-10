@@ -5,6 +5,7 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,7 +28,9 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -34,6 +38,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,11 +47,13 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView emailTextView, keywordsTextView;
     private ImageView userImageView, emailImageView;
     private ImageView imageViewSettings, videoImageView;
+    private Button btn_changePass, btnLogOut;
 
     private static int RESULT_LOAD_IMAGE = 1;
-    FirebaseStorage storage = FirebaseStorage.getInstance();
-    FirebaseAuth auth = FirebaseAuth.getInstance();
-    FirebaseFirestore dataStore = FirebaseFirestore.getInstance();
+    FirebaseStorage storage;
+    FirebaseAuth auth;
+    FirebaseFirestore dataStore;
+    ArrayList<String> userNames;
 
 
     private String email,password;
@@ -57,6 +64,12 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        storage = FirebaseStorage.getInstance();
+        auth = FirebaseAuth.getInstance();
+        dataStore = FirebaseFirestore.getInstance();
+        userNames = new ArrayList<>();
+
+        getData();
         genderTextView = findViewById(R.id.Gender_textview);
         nameTextView = findViewById(R.id.name_textview);
         ageTextView = findViewById(R.id.age_textview);
@@ -66,6 +79,23 @@ public class ProfileActivity extends AppCompatActivity {
         emailImageView = findViewById(R.id.email_imageView);
         imageViewSettings = findViewById(R.id.imageViewSettings);
         videoImageView = findViewById(R.id.imageViewVideo);
+        btn_changePass = findViewById(R.id.changePass_btn);
+        btnLogOut = findViewById(R.id.buttonLogout);
+
+        btn_changePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Ronaldo = new Intent(ProfileActivity.this, ResetPasswordActivity.class);
+                startActivity(Ronaldo);
+            }
+        });
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logOut();
+            }
+        });
 
         imageViewSettings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,6 +147,12 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void logOut() {
+        auth.signOut();
+        Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 
     public void populateData() {
@@ -182,6 +218,29 @@ public class ProfileActivity extends AppCompatActivity {
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                 //Uri downloadUrl = taskSnapshot();
+            }
+        });
+    }
+
+    private void getData() {
+
+        dataStore.collection("Data").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                for (DocumentSnapshot doc: task.getResult().getDocuments()) {
+                    if (doc.exists()) {
+                        Map<String, Object> user= doc.getData();
+                        Log.d("TAG", "onComplete: " + user.toString());
+                        for (String x: user.keySet()) {
+                            String s = user.get(x).toString();
+                            String[] arr = s.split(",");
+                            String name = arr[10].substring(6);
+                            userNames.add(name);
+                        }
+
+                    }
+                }
+                Log.d("Tag", userNames.toString());
             }
         });
     }

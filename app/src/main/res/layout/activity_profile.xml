@@ -40,7 +40,7 @@
         android:id="@+id/user_imageview"
         android:layout_width="107dp"
         android:layout_height="105dp"
-        android:layout_marginStart="141dp"
+        android:layout_marginStart="163dp"
         android:layout_marginTop="38dp"
         android:layout_marginEnd="163dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
         android:layout_width="76dp"
         android:layout_height="24dp"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="172dp"
         android:text="Gender"
         android:textAlignment="center"
@@ -70,7 +70,7 @@
         android:layout_width="100dp"
         android:layout_height="31dp"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="172dp"
         android:text=" age"
         android:textAlignment="center"
@@ -85,22 +85,22 @@
         android:id="@+id/keywords"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="28dp"
         android:text="Keywords"
         android:textAlignment="center"
         android:textColor="#8A2222"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/changePass_btn" />
 
     <TextView
         android:id="@+id/email_textview"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="43dp"
         android:layout_weight="1"
         android:text="   johnsmith11@gmail.com"
@@ -117,9 +117,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="360dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toStartOf="@+id/email_textview"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/email_view" />
@@ -135,4 +136,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/video_click" />
+
+    <Button
+        android:id="@+id/changePass_btn"
+        android:layout_width="264dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="172dp"
+        android:text="Change Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_textview" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="53dp"
+        android:text="LogOut"
+        app:layout_constraintEnd_toStartOf="@+id/user_imageview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewVideo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

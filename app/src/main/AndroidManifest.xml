@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GymBudd">
+        <activity android:name=".ResetPasswordActivity"></activity>
         <activity
             android:name=".ViewFriendActivity"
             android:exported="false" />
