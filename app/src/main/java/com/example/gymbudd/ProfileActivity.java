@@ -147,6 +147,13 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+        emailImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iwork = new Intent(ProfileActivity.this, MessageInboxActivity.class);
+                startActivity(iwork);
+            }
+        });
     }
 
     private void logOut() {
